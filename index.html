@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="The personal portfolio of Goh Qi Long Jaren.">
+    <title>Goh Qi Long Jaren | Portfolio</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #172321;
+        background: #f5f7f3;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page-shell {
+        width: min(1080px, calc(100% - 48px));
+        margin-inline: auto;
+      }
+
+      .site-header,
+      .site-nav,
+      .hero {
+        display: flex;
+        align-items: center;
+      }
+
+      .site-header {
+        justify-content: space-between;
+        padding-block: 24px;
+      }
+
+      .site-nav {
+        gap: 24px;
+      }
+
+      .hero {
+        justify-content: space-between;
+        gap: 48px;
+        padding-block: 88px;
+      }
+
+      .hero-copy {
+        max-width: 620px;
+      }
+
+      .portrait-placeholder {
+        display: grid;
+        flex: 0 0 280px;
+        aspect-ratio: 1;
+        place-items: center;
+        border: 2px dashed #92a69a;
+        border-radius: 50%;
+        color: #52665c;
+        text-align: center;
+      }
+
+      section {
+        padding-block: 56px;
+      }
+
+      .skill-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .skill-list li {
+        padding: 10px 14px;
+        border: 1px solid #d5ded6;
+        border-radius: 999px;
+      }
+
+      @media (max-width: 680px) {
+        .hero {
+          align-items: flex-start;
+          flex-direction: column-reverse;
+          gap: 32px;
+          padding-block: 56px;
+        }
+
+        .portrait-placeholder {
+          flex-basis: auto;
+          width: min(220px, 70vw);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <a class="brand" href="#home">Jaren Goh</a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </nav>
+      </header>
+
+      <main id="home">
+        <section class="hero" aria-labelledby="intro-title">
+          <div class="hero-copy">
+            <p class="eyebrow">Personal portfolio</p>
+            <h1 id="intro-title">Hi, I'm Goh Qi Long Jaren.</h1>
+            <p>
+              I'm a student learning to build thoughtful, useful digital
+              experiences. This is where I share what I'm learning and the
+              projects I've worked on.
+            </p>
+            <a class="button" href="#projects">Explore my projects</a>
+          </div>
+          <div class="portrait-placeholder" role="img" aria-label="Photo placeholder">
+            <span>Add your<br>photo here</span>
+          </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-title">
+          <p class="eyebrow">A little about me</p>
+          <h2 id="about-title">Curious by nature, always learning.</h2>
+          <p>
+            I'm building my skills one project at a time, learning how to turn
+            ideas into clear and accessible web experiences. Take a look at my
+            course projects below.
+          </p>
+        </section>
+
+        <section id="skills" aria-labelledby="skills-title">
+          <p class="eyebrow">What I'm learning</p>
+          <h2 id="skills-title">Skills</h2>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Git &amp; GitHub</li>
+            <li>Responsive design</li>
+          </ul>
+        </section>
+
+        <section id="projects" aria-labelledby="projects-title">
+          <p class="eyebrow">Things I've made</p>
+          <h2 id="projects-title">Course projects</h2>
+          <p>Project links will be added here.</p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
