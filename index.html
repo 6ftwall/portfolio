@@ -27,14 +27,41 @@
         scroll-behavior: smooth;
       }
 
+      section,
+      main {
+        scroll-margin-top: 24px;
+      }
+
       body {
         margin: 0;
         color: var(--ink);
         line-height: 1.7;
       }
 
+      .skip-link {
+        position: absolute;
+        z-index: 1;
+        top: 12px;
+        left: 12px;
+        padding: 10px 14px;
+        transform: translateY(-160%);
+        border-radius: 8px;
+        background: var(--ink);
+        color: white;
+        font-weight: 700;
+      }
+
+      .skip-link:focus {
+        transform: translateY(0);
+      }
+
       a {
         color: inherit;
+      }
+
+      a:focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 4px;
       }
 
       h1,
@@ -308,10 +335,24 @@
           justify-content: flex-start;
         }
       }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          scroll-behavior: auto !important;
+          transition-duration: 0.01ms !important;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="page-shell">
+      <a class="skip-link" href="#home">Skip to content</a>
       <header class="site-header">
         <a class="brand" href="#home">Jaren Goh</a>
         <nav class="site-nav" aria-label="Main navigation">
@@ -333,6 +374,7 @@
             </p>
             <a class="button" href="#projects">Explore my projects</a>
           </div>
+          <!-- Replace this placeholder with an img element when your photo is ready. -->
           <div class="portrait-placeholder" role="img" aria-label="Photo placeholder">
             <span>Add your<br>photo here</span>
           </div>
