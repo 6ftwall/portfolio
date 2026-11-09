@@ -81,6 +81,18 @@
         border-radius: 999px;
       }
 
+      .project-grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 20px;
+      }
+
+      .project-card {
+        padding: 24px;
+        border: 1px solid #d5ded6;
+        border-radius: 16px;
+      }
+
       @media (max-width: 680px) {
         .hero {
           align-items: flex-start;
@@ -149,9 +161,35 @@
         <section id="projects" aria-labelledby="projects-title">
           <p class="eyebrow">Things I've made</p>
           <h2 id="projects-title">Course projects</h2>
-          <p>Project links will be added here.</p>
+          <div class="project-grid">
+            <article class="project-card">
+              <p class="eyebrow">Course project 01</p>
+              <h3>Project title goes here</h3>
+              <p>Replace this with a short description of what you made and learned.</p>
+              <!-- Replace this URL with the project repository or live demo. -->
+              <a class="project-link" href="https://github.com/your-username/project-one" target="_blank" rel="noopener noreferrer">Add project link <span aria-hidden="true">&nearr;</span></a>
+            </article>
+            <article class="project-card">
+              <p class="eyebrow">Course project 02</p>
+              <h3>Project title goes here</h3>
+              <p>Replace this with a short description of what you made and learned.</p>
+              <!-- Replace this URL with the project repository or live demo. -->
+              <a class="project-link" href="https://github.com/your-username/project-two" target="_blank" rel="noopener noreferrer">Add project link <span aria-hidden="true">&nearr;</span></a>
+            </article>
+            <article class="project-card">
+              <p class="eyebrow">Course project 03</p>
+              <h3>Project title goes here</h3>
+              <p>Replace this with a short description of what you made and learned.</p>
+              <!-- Replace this URL with the project repository or live demo. -->
+              <a class="project-link" href="https://github.com/your-username/project-three" target="_blank" rel="noopener noreferrer">Add project link <span aria-hidden="true">&nearr;</span></a>
+            </article>
+          </div>
         </section>
       </main>
+      <footer class="site-footer">
+        <p>&copy; <span>Goh Qi Long Jaren</span>. Built with care.</p>
+        <a href="#home">Back to top &uarr;</a>
+      </footer>
     </div>
   </body>
 </html>
